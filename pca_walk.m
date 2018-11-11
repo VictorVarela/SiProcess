@@ -24,5 +24,11 @@ function pca_walk(data, K1, P1, dim, n)
         end
     end
     montage(vetor, colormap(gray(256)), 'Size', [n 7], 'ThumbnailSize', [1200 NaN]);
+
+%If Matlab version < 2018:
+%     newimage = reshape(vetor, [n,7]);
+%     newimage = cell2mat(newimage);   
+%     figure()
+%     imshow (newimage)
 end
 
